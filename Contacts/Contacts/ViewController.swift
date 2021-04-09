@@ -16,7 +16,8 @@ class ContactsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactItems", for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "ContactItems", for: indexPath)
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "ContactItems")
         let item = contactItems.contacts[indexPath.section][indexPath.row]
         cell.textLabel?.text = item
         return cell
